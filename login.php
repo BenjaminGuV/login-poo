@@ -43,28 +43,35 @@
 	}
 	
 ?>
+<!doctype html>
 <html>
 <head>
-	<title></title>
+	<title>Login</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="UTF-8" />
 </head>
 <body>
-	<h1>Login</h1>
-	<form method="post" action="login.php">
-		<?php
-			if ($_GET["error"] == 1) {
-				?>
-				<p>Error</p>
-				<?php
-			}
-		?>
-		<dl>
-			<dt>Nombre:</dt>
-			<dd><input type="text" name="nombre" value=""></dd><br>
-			<dt>Password:</dt>
-			<dd><input type="password" name="pass" value=""></dd><br>
-		</dl>
-		<input type="submit" value="Login">
-	</form>
-	<p><small><a href="registro.php">Registrate aqui</a></small></p>
+	<section id="login">
+		<header>
+			<h2>Login</h2>
+		</header>
+		<form method="post" action="login.php">
+			<?php
+				if ($_GET["error"] == 1) {
+					?>
+					<p>Error</p>
+					<?php
+				}
+			?>
+			<dl>
+				<dt><label for="nombre">Nombre:</label></dt>
+				<dd><input type="text" name="nombre" value=""></dd><br>
+				<dt><label for="pass">Password:</label></dt>
+				<dd><input type="password" name="pass" value=""></dd><br>
+			</dl>
+			<input type="submit" value="Login">
+		</form>
+	</section>
 </body>
 </html>

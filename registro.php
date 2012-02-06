@@ -20,6 +20,8 @@
 		$sql = $Usuario->crearUsuario();
 		//ejecutamos
 		$db->ejecutar($sql);
+		//direcciona a login.php
+		header("Location: login.php");
 
 	} else {
 		//si no - vacio
