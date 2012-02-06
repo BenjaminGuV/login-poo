@@ -1,0 +1,103 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+header, footer, aside, nav, article{
+	display: block;
+}
+
+body{
+	background-color: #0b1da5;
+	font: 16px Helvetica, Arial, sans-serif;
+	margin: 0px auto;
+	width: 940px;
+}
+
+table{
+	margin: auto;
+}
+
+#login{
+	background-color: #FFF;
+	height: 200px;
+	left: 50%;
+	margin-left: -110px;
+	margin-top: -110px;
+	padding: 10px;
+	position: absolute;
+	top: 50%;
+	width: 200px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px black;
+
+}
+	#login input[type="text"], input[type="password"]{
+		
+	}
+
+	header{
+		margin-top: 15px;
+		background-color: white;
+		padding: 5px;
+	}
+
+	nav{
+		background-color: black;
+		height: 25px;
+		position: absolute;
+		width: 100%;
+		left: 0px;
+		top: 0px;
+	}
+
+	nav a:link{
+		color: white;
+	}
+
+	nav a:visited{
+		color: gray;
+	}
+
+	nav a:hover{
+		color: navy;
+	}
+
+	nav ul{
+		float: right;
+		margin: 2px auto;
+	}
+
+	nav	ul li{
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+	#intro{
+		background-color: white;
+		padding: 5px;
+	}
+
+	#intro header{
+		padding-left: 5px;
+	}
+
+	dl{
+		width: 100%;
+		overflow: hidden;
+	}
+
+	dl dt{
+		float: left;
+		width: 50%;
+		font-weight: bold;
+	}
+
+	dl dd{
+		float: left;
+		width: 50%;
+	}
+
+	dl br{
+		clear: both;
+	}
