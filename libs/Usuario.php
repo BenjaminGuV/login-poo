@@ -36,6 +36,7 @@
 		//metodo que devuelve una consulta para crear un usuario
 		public function crearUsuario()
 		{
+			$this->_pass = $this->cifrarPass($this->_pass);
 			$sql = sprintf( "INSERT INTO usuarios( nombre, pass, email) VALUES ( '%s', '%s', '%s')", $this->_nombre, $this->_pass, $this->_email );
 
 			return $sql;
@@ -54,6 +55,16 @@
 			$sql = sprintf( "SELECT * FROM usuarios WHERE id = '%d'", $this->_id );
 
 			return $sql;
+		}
+
+		//cifrar password a SHA254
+
+		private function cifrarPass($pass)
+		{
+
+			$this->_pass = hash('sha256', $pass);
+
+			return $this->_pass;
 		}
 
 	}

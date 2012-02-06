@@ -49,6 +49,7 @@
 		//verifica si el password coinciden y retorna falso o verdadero
 		public function verificarUsuario( $valor )
 		{
+			$this->_pass = $this->cifrarPass($this->_pass);
 			if ($valor[0]["pass"] == $this->_pass ) {
 				$this->crearSession( $valor[0]["id"] );
 				$ban = true;
@@ -73,6 +74,16 @@
 			session_destroy();
 			unset($_SESSION);
 			$this->_status;
+		}
+
+		//cifrar pass a SHA254
+
+		private function cifrarPass($pass)
+		{
+
+			$this->_pass = hash('sha256', $pass);
+
+			return $this->_pass;
 		}
 
 
