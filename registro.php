@@ -28,25 +28,32 @@
 	}
 	
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Registro</title>
 </head>
 <body>
-	<h1>Registrate</h1>
-	<form method="post" action="registro.php">
-		<fieldset>
-			<legend>Datos de usuario</legend>
-			<dl>
-				<dt>Nombre:</dt>
-				<dd><input type="text" name="nombre" value=""></dd><br>
-				<dt>Password:</dt>
-				<dd><input type="password" name="pass" value=""></dd><br>
-				<dt>Email:</dt>
-				<dd><input type="text" name="email" value=""></dd><br>
-			</dl>
-			<input type="submit" value="Enviar">
-		</fieldset>
-	</form>
+	<section id="registro">
+		<header>
+			<h2>Registrate</h2>
+		</header>
+		<form method="post" action="registro.php">
+			<fieldset>
+				<legend>Datos de usuario</legend>
+				<dl>
+					<dt>Nombre:</dt>
+					<dd><input type="text" name="nombre" value=""></dd><br>
+					<dt>Password:</dt>
+					<dd><input type="password" name="pass" value=""></dd><br>
+					<dt>Email:</dt>
+					<dd><input type="text" name="email" value=""></dd><br>
+				</dl>
+				<input type="submit" value="Enviar">
+			</fieldset>
+		</form>
+	</section>
 </body>
 </html>

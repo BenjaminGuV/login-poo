@@ -44,7 +44,7 @@
 	
 ?>
 <!doctype html>
-<html>
+<html lang="es">
 <head>
 	<title>Login</title>
 
