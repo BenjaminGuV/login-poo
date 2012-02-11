@@ -32,8 +32,8 @@ table{
 	box-shadow: 5px 5px 5px black;
 
 }
-	#login input[type="text"], input[type="password"]{
-		
+	#login input[type="text"], #login input[type="password"]{
+		width: 90px;
 	}
 
 	header{
@@ -91,13 +91,37 @@ table{
 		float: left;
 		width: 50%;
 		font-weight: bold;
+		margin: 10px auto;
 	}
 
 	dl dd{
 		float: left;
 		width: 50%;
+		margin: 10px auto;
 	}
 
 	dl br{
 		clear: both;
+	}
+
+	#registro{
+		background-color: #FFF;
+		height: 300px;
+		left: 50%;
+		margin-left: -160px;
+		margin-top: -160px;
+		padding: 10px;
+		position: absolute;
+		top: 50%;
+		width: 300px;
+		border-radius: 10px;
+		box-shadow: 5px 5px 5px black;
+	}
+
+	fieldset{
+		padding: 5px;
+	}
+
+	input[type="text"], input[type="password"]{
+		width: 120px;
 	}
