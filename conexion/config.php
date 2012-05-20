@@ -3,10 +3,10 @@
    $host='localhost'; 
     
    //Usuario 
-   $user='prueba'; 
+   $user='pruebas'; 
     
    //Password 
-   $password='prueba'; 
+   $password='pruebas'; 
     
    //Base de datos a utilizar 
    $db='loginpoo';

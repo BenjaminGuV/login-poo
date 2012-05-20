@@ -33,7 +33,8 @@
 		public function table( $row, $opcion = '<td></td>' )
 		{
 
-			for ($i=0; $i < sizeof( $row[0] ) ; $i++) {
+
+			for ($i=0; $i < sizeof( $row ) ; $i++) {
 				$table .= "<tr>";
 				foreach ($row[$i] as $key) {
 					$table .= "<td>";
