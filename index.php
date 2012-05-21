@@ -47,6 +47,9 @@
 		$tableCompleta .= $Table->table( $tareas );
 
 		$tableCompleta .= '</table>';
+
+		//$paginas = $Table->pagina();
+
 	} else {
 		// si no esta logueado direcciona
 		header("Location: login.php");
