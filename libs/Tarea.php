@@ -26,9 +26,14 @@
 			return $sql;
 		}
 
-		public function selectTarea()
+		public function selectTarea( $pagina = 0, $numxPagina = 0 )
 		{
-			$sql = sprintf( "SELECT * FROM tareas" );
+			if ( $numxPagina == 0 && $pagina == 0 ) {
+				$sql = sprintf( "SELECT * FROM tareas" );
+			} else {
+				$registro = $numxPagina * ( $pagina - 1 );
+				$sql = sprintf( "SELECT * FROM tareas LIMIT %d, %d", $registro, $numxPagina );
+			}
 
 			return $sql;
 		}

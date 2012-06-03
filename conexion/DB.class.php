@@ -90,6 +90,11 @@ Class Db{
    public function lastID(){ 
       return mysql_insert_id($this->link); 
    }
+
+   public function numeroRegistro( $resultado )
+   {
+      return mysql_num_rows( $resultado );
+   }
    
    //desconecta la conexion a la base de datos
    public function __sleep()

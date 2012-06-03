@@ -1,5 +1,5 @@
 <?php
-	
+	//nuevo comentarios
 	//liberias
 	require 'conexion/Conf.class.php';
 	require 'conexion/DB.class.php';
@@ -27,13 +27,17 @@
 		$result = $db->ejecutar($sql);
 		//obtenemos los datos del usuario
 		$Usuarios = $db->obtener_fila($result);
-
 		//obtenemos los datos de la tabla tarea
-		$sql = $Tarea->selectTarea();
+		$sql = $Tarea->selectTarea( 2, 3);
+
 		//obtenemos resultados
 		$result	= $db->ejecutar( $sql );
 		//obtener todos los resultados
 		$tareas = $db->obtener_fila( $result );
+
+		$sql = $Tarea->selectTarea();
+		$result	= $db->ejecutar( $sql );
+		$numFilasTareas = $db->numeroRegistro( $result );
 
 		$cabNombres =  array(
 			'id' => 'Id',
@@ -48,7 +52,7 @@
 
 		$tableCompleta .= '</table>';
 
-		//$paginas = $Table->pagina();
+		$tableCompleta .= $Table->paginacion( $numFilasTareas , 3 , 2);
 
 	} else {
 		// si no esta logueado direcciona
@@ -78,6 +82,11 @@
 	<section id="intro">
 		<header>
 			<h2>¡Bienvenidos <?php echo $Usuarios[0]["nombre"]; ?> al panel de control!</h2>
+			<?php 
+				var_dump( $numFilasTareas ); 
+				var_dump( $sql );
+				var_dump( $paginas );
+			?>
 		</header>
 		<section>
 			<header>

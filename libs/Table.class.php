@@ -48,9 +48,21 @@
 		}
 
 
-		function pagina($pages , $numeroRegistros, $ban, $orden)
+		public function paginacion( $numRegistro, $numxPagina, $paginaActual )
 		{
-			
+			$pagina = $numRegistro / $numxPagina;
+			$pagina = ceil( $pagina );
+			$text = '<ul>';
+			for ($i=1; $i <= $pagina; $i++) {
+				if ( $i == $paginaActual ) {
+				 	$text .= '<li><strong>' . $i . '</strong></li>';
+				 } else {
+				 	$text .= '<li>' . $i . '</li>';
+				 }
+			}
+			$text .= '</ul>';
+
+			return $text;
 		}
 	}
 
